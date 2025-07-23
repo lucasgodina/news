@@ -48,7 +48,7 @@ class SignupPageTests(TestCase):
                 "username": "testuser",
                 "email": "testuser@email.com",
                 "password1": "testpass123",
-                "password2": "testuser123",
+                "password2": "testpass123",
             },
         )
         self.assertEqual(response.status_code, 302)
