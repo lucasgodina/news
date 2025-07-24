@@ -43,25 +43,21 @@
                                        href="#"
                                        role="button"
                                        data-bs-toggle="dropdown"
-                                       aria-expanded="false">
-                                {{ user.username }}
-                                    </a>
+                                       aria-expanded="false">{{ user.username }}</a>
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li>
-                                            <a class="dropdown-item" href="{% url 'password_change' %}">
-                                            Change password</a>
+                                            <a class="dropdown-item" href="{% url 'password_change' %}">Change password</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
                                         <li>
-                                            <form method="post" action="{% url 'logout' %}" style="display:inline;">{% csrf_token %}
+                                            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                                                {% csrf_token %}
                                                 <button type="submit"
                                                         class="btn btn-link nav-link"
                                                         style="display:inline;
-                                                               cursor:pointer">
-                                                Logout
-                                                </button>
+                                                               cursor:pointer">Logout</button>
                                             </form>
                                         </li>
                                     </ul>
