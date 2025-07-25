@@ -1,0 +1,37 @@
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "DJ",  # django-specific rules
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E203",  # whitespace before ':'
+]
+
+[tool.ruff.lint.per-file-ignores]
+"*/migrations/*" = ["E501", "DJ01"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["django_project", "accounts", "articles", "pages"]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.djlint]
+profile = "django"
+ignore = "H014,H006,H025"
+indent = 2
+max_line_length = 88
+format_css = true
+format_js = true
+extension = "html"
+include = "**/*.html"
+exclude = "**/*.py,**/migrations/*,**/__pycache__/*"

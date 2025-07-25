@@ -1,0 +1,11 @@
+{
+  "profile": "django",
+  "ignore": "H014,H006,H025",
+  "indent": 2,
+  "max_line_length": 88,
+  "format_css": true,
+  "format_js": true,
+  "extension": "html",
+  "include": "**/*.html",
+  "exclude": "**/*.py,**/migrations/*,**/__pycache__/*,**/*.pyc"
+}

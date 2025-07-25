@@ -33,7 +33,7 @@
                         </li>
                         {% if user.is_authenticated %}
                             <li>
-                                <a href="#" class="nav-link px-2 link-dark">+ New</a>
+                                <a href="{% url "article_new" %}" class="nav-link px-2 link-dark">+ New</a>
                             </li>
                         </ul>
                         <div class="mr-auto">
@@ -57,7 +57,9 @@
                                                 <button type="submit"
                                                         class="btn btn-link nav-link"
                                                         style="display:inline;
-                                                               cursor:pointer">Logout</button>
+                                                               cursor:pointer">
+                                                    Logout
+                                                </button>
                                             </form>
                                         </li>
                                     </ul>
